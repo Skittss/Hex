@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{86CA7A4B-1E0C-476D-A34A-8E4315E7ED8F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hex</RootNamespace>
+    <AssemblyName>Hex</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Source\Engine\GridUtils\CoordRange.cs" />
+    <Compile Include="Source\Engine\GridUtils\ManhattanDistance.cs" />
+    <Compile Include="Source\Engine\GridUtils\Neighbours.cs" />
+    <Compile Include="Source\Engine\GridUtils\PathFinder.cs" />
+    <Compile Include="Source\Engine\UI\Line.cs" />
+    <Compile Include="Source\Engine\UI\PercentageBar.cs" />
+    <Compile Include="Source\Engine\UI\RectBox.cs" />
+    <Compile Include="Source\Engine\UI\RectBoxButton.cs" />
+    <Compile Include="Source\Engine\UI\UiTools.cs" />
+    <Compile Include="Source\Engine\UI\WindowTools.cs" />
+    <Compile Include="Source\Engine\UI\SpriteButton.cs" />
+    <Compile Include="Source\Engine\Pools\WeightedPool.cs" />
+    <Compile Include="Source\Game\BoardGame\Bench.cs" />
+    <Compile Include="Source\Game\BoardGame\Board\Stage.cs" />
+    <Compile Include="Source\Game\BoardGame\Player.cs" />
+    <Compile Include="Source\Game\BoardGame\ProbabilityPools.cs" />
+    <Compile Include="Source\Game\BoardGame\UI\ActionLogBox.cs" />
+    <Compile Include="Source\Game\BoardGame\UI\TutorialButton.cs" />
+    <Compile Include="Source\Game\BoardGame\UI\UseAbilityButton.cs" />
+    <Compile Include="Source\Game\BoardGame\UI\LevelUnitCapButton.cs" />
+    <Compile Include="Source\Game\BoardGame\UI\StageViewBox.cs" />
+    <Compile Include="Source\Game\BoardGame\UI\UnitShopBox.cs" />
+    <Compile Include="Source\Game\BoardGame\UI\UnitShopButton.cs" />
+    <Compile Include="Source\Game\BoardGame\Units\Crab.cs" />
+    <Compile Include="Source\Game\BoardGame\Units\Rider.cs" />
+    <Compile Include="Source\Game\BoardGame\Units\Recruit.cs" />
+    <Compile Include="Source\Game\BoardGame\Units\IceMage.cs" />
+    <Compile Include="Source\Game\BoardGame\Units\UnitIdLeaser.cs" />
+    <Compile Include="Source\Game\BoardGame\Units\UnitPool.cs" />
+    <Compile Include="Source\Game\BoardGame\UI\SinglePressSpriteButton.cs" />
+    <Compile Include="Source\Game\BoardGame\Units\UnitShop.cs" />
+    <Compile Include="Source\Game\CharacterSelect\UI\SideDisplayBox.cs" />
+    <Compile Include="Source\Game\Characters\Character.cs" />
+    <Compile Include="Source\Game\Characters\CharacterLinker.cs" />
+    <Compile Include="Source\Game\Characters\Scout.cs" />
+    <Compile Include="Source\Game\Characters\Bard.cs" />
+    <Compile Include="Source\Game\Characters\Hunter.cs" />
+    <Compile Include="Source\Game\Characters\Sorcerer.cs" />
+    <Compile Include="Source\Game\Characters\Knight.cs" />
+    <Compile Include="Source\Game\GameStates\BoardGame\BattleTurn.cs" />
+    <Compile Include="Source\Game\GameStates\BoardGame\PassTurnToBattleTurn.cs" />
+    <Compile Include="Source\Game\GameStates\BoardGame\PassTurnToPrepTurn.cs" />
+    <Compile Include="Source\Game\GameStates\BoardGame\GameEndScreen.cs" />
+    <Compile Include="Source\Game\GameStates\BoardGame\RoundEndScreen.cs" />
+    <Compile Include="Source\Game\GameStates\BoardGame\BoardGame.cs" />
+    <Compile Include="Source\Game\BoardGame\Units\Mage.cs" />
+    <Compile Include="Source\Game\BoardGame\Units\Unit.cs" />
+    <Compile Include="Source\Game\CharacterSelect\UI\CharSelectConfirmButton.cs" />
+    <Compile Include="Source\Game\CharacterSelect\UI\CharSelectButton.cs" />
+    <Compile Include="Source\Engine\GameStates\GameStateInterface.cs" />
+    <Compile Include="Source\Engine\GameStates\GameStateManager.cs" />
+    <Compile Include="Source\Engine\GameStates\GameState.cs" />
+    <Compile Include="Source\Game\GameStates\EntryScreen.cs" />
+    <Compile Include="Source\Game\GameStates\BoardGame\PassTurnScreen.cs" />
+    <Compile Include="Source\Game\GameStates\CharacterSelect.cs" />
+    <Compile Include="Source\Game\GameStates\BoardGame\PreparationTurn.cs" />
+    <Compile Include="Source\Game\GameStates\OverlayScreen.cs" />
+    <Compile Include="Source\Game\GameStates\TutorialScreen.cs" />
+    <Compile Include="Source\Hex.cs" />
+    <Compile Include="Source\Engine\Input\InputManager.cs" />
+    <Compile Include="Source\Engine\Input\Keybinds.cs" />
+    <Compile Include="Source\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Source\Game\BoardGame\Board\HexGrid.cs" />
+    <Compile Include="Source\Game\BoardGame\Board\HexTile.cs" />
+    <Compile Include="Source\Engine\GridUtils\CoordConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Priority Queue, Version=4.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\OptimizedPriorityQueue.4.2.0\lib\net45\Priority Queue.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
